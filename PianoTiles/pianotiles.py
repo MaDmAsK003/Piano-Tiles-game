@@ -16,36 +16,36 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
 ### Loading Images ************************************************************
-bg = pygame.image.load('C:\\Jarvis\\games\\PianoTiles\\bg.png')
-overlay = pygame.image.load('C:\\Jarvis\\games\\PianoTiles\\red overlay.png').convert_alpha()
-piano = pygame.image.load('C:\\Jarvis\\games\\PianoTiles\\piano.png').convert_alpha()
+bg = pygame.image.load('bg.png')
+overlay = pygame.image.load('red overlay.png').convert_alpha()
+piano = pygame.image.load('piano.png').convert_alpha()
 piano = pygame.transform.scale(piano, (212, 212))
 
 ### Fonts *********************************************************************
 pygame.font.init()
-score_font = pygame.font.Font('C:\\Jarvis\\games\\PianoTiles\\Futura condensed.ttf', 30)
-title_font = pygame.font.Font('C:\\Jarvis\games\\PianoTiles\\Alternity-8w7J.ttf', 30)
-gameover_font = pygame.font.Font('C:\\Jarvis\\games\\PianoTiles\\Alternity-8w7J.ttf', 40)
+score_font = pygame.font.Font('Futura condensed.ttf', 30)
+title_font = pygame.font.Font('Alternity-8w7J.ttf', 30)
+gameover_font = pygame.font.Font('Alternity-8w7J.ttf', 40)
 
 ### Sounds ********************************************************************
 mixer.init()
-mixer.music.load('C:\\Jarvis\\games\\PianoTiles\\backgroundmusic.mp3')
+mixer.music.load('backgroundmusic.mp3')
 mixer.music.set_volume(0.8)
 mixer.music.play(loops=-1)
 
 sound_list = []
 sound_index = 0
 for s in ['a', 'b', 'c', 'd', 'e', 'f', 'g']:
-	sound = pygame.mixer.Sound(f'C:\\Jarvis\\games\\PianoTiles\\{s}.mp3')
+	sound = pygame.mixer.Sound(f'{s}.mp3')
 	sound_list.append(sound)
-fail_page = pygame.mixer.Sound('C:\\Jarvis\\games\\PianoTiles\\buzzer.mp3')
+fail_page = pygame.mixer.Sound('buzzer.mp3')
 
 ### Buttons *******************************************************************
-start_img = pygame.image.load('C:\\Jarvis\\games\\PianoTiles\\start.png')
+start_img = pygame.image.load('start.png')
 start_btn = Button(start_img, (120,40), 80, 380)
 
-restart_img = pygame.image.load('C:\\Jarvis\\games\\PianoTiles\\restart.png')
-menu_img = pygame.image.load('C:\\Jarvis\\games\\PianoTiles\\menu.png')
+restart_img = pygame.image.load('restart.png')
+menu_img = pygame.image.load('menu.png')
 
 restart_btn = Button(restart_img, (40,40), 80, 320)
 menu_btn = Button(menu_img, (40,40), 160, 320)
